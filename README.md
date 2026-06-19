@@ -1,2 +1,2 @@
-# cs1-2026-class3110-team4-project
+# cs1-2026-class6-team4-project
 チーム４のウェブ構築
