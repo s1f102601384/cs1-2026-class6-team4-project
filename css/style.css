@@ -1,3 +1,51 @@
 h1 {
     color: red;
 }
+
+p {
+    color: blue;
+}
+
+/* ① ナビゲーション全体の背景色と上下の隙間 */
+.header {
+  background-color: #14113c; /* 画像のような濃い紺色 */
+  padding: 15px 0;           /* 上下に少し隙間を作ります */
+}
+
+/* ② 縦並びのリストを「横並び」にして「中央」に寄せる */
+.header ul {
+  display: flex;
+  justify-content: center; /* メニューを真ん中に集める */
+  list-style: none;        /* 箇条書きの「・」を消す */
+  margin: 0;
+  padding: 0;
+}
+
+/* ③ 各メニューの左右の隙間と、間の区切り線 */
+.header li {
+  position: relative;
+  padding: 0 35px;         /* メニュー同士の間隔（お好みで調整してください） */
+}
+
+/* メニューの間に「 | 」という区切り線を入れる魔法 */
+.header li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: #ffffff;
+  opacity: 0.3;            /* 白い線を少し透明にして目立たせすぎないようにする */
+}
+
+/* ④ リンク文字の見た目（白文字・下線なし） */
+.header a {
+  color: #ffffff;          /* 文字色を白に */
+  text-decoration: none;   /* リンク特有の下線を消す */
+  font-size: 15px;         /* 文字の大きさ */
+  font-weight: bold;       /* 文字を太字にする */
+  transition: opacity 0.3s;/* マウスを乗せたときの動きを滑らかにする */
+}
+
+/* ⑤ 【おまけ】マウスを乗せたときにフワッと薄くする（定番演出） */
+.header a:hover {
+  opacity: 0.7;
+}
